@@ -9,7 +9,7 @@ function selectedByOxygenUse(arr){
 }
 return candidate;
 
-let selectedCandidateBonus= slectedByOxygenUse(crew);
+let selectedCandidateBonus= selectedByOxygenUse(crew);
 console.log(oxygenExpended(selectedCandidateBonus));
 
 function crewMass(arr){
