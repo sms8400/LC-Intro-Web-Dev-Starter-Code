@@ -110,7 +110,6 @@ function oxygenExpanded(candidate, alt=2000, speed=28000){
   return `${candidate.name} will perform the spacewalk, which will last ${duration} hours and require ${oxygen} kg of oxygen.\n`;
 }
 
-
 let selectedCandidate=selectRandomEntry(crew);
 console.log(oxygenExpanded(selectedCandidate));
 
@@ -128,7 +127,8 @@ function selectedByOxygenUse(arr){
 }
 
 let selectedCandidateBonus= selectedByOxygenUse(crew);
-console.log(oxygenExpended(selectedCandidateBonus));
+console.log(oxygenExpanded(selectedCandidateBonus));
+
 function crewMass(arr){
   let mass=0;
   for(let i= 0; i < arr.length; i++){
@@ -139,7 +139,7 @@ function crewMass(arr){
 const ROCKET_MASS=7500;
 
 function getTotalMass(arr){
-  return crew(arr)+ROCKET_MASS;
+  return crewMass(arr)+ROCKET_MASS;
 }
 
 function fuelRequired(arr){
