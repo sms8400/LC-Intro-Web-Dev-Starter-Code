@@ -45,26 +45,91 @@ let waterBear = {
 
 let crew = [superChimpOne, superChimpTwo, salamander, dog, waterBear];
 
-function crew(){
-  
+let id=1
+
+// superChimpOne["astronautID"] = id++;
+
+// salamander["astronautID"] = id++;
+
+// superChimpTwo["astronautID"] = id++;
+
+// superDog["astronautID"] = id++;
+
+// superTardigrade["astronautID"] = id++;
+
+// superChimpOne["move"] = Math.round(Math.random()*10);
+
+// salamander["move"] = Math.round(Math.random()*10);
+
+// superChimpTwo["move"] = Math.round(Math.random()*10);
+
+// superDog["move"] = Math.round(Math.random()*10);
+
+// superTardigrade["move"] = Math.round(Math.random()*10);
+
+function relevantInformation(animal){
+    let tempArr = [];
+    for (let i = 0; i < animal.length; i++){
+    tempArr.push(`${animal[i].name} is a ${animal[i].species}. They are ${animal[i].age} years old and ${animal[i].mass} kilograms. Their ID is ${animal[i].astronautID}.`);
+
+    }
+    return tempArr;
 }
 
-crew.push(`${} is a ${}. They are ${} years old and ${} kilograms. Their ID is ${}.`);
+
+// function fitnessTest(candidates){
+//  let results = [], numSteps, turns;
+//  for (let i = 0; i < candidates.length; i++){
+//      numSteps = 0;
+//      turns = 0;
+//      while(numSteps < 20){
+//      numSteps += candidates[i].move();
+//      turns++;
+//      }
+//      results.push(`${candidates[i].name} took ${turns} turns to take 20 steps.`);
+//  }
+//  return results;
+// }
 
 
-function fitnessTest(candidates){
- let results = [], numSteps, turns;
- for (let i = 0; i < candidates.length; i++){
-     numSteps = 0;
-     turns = 0;
-     while(numSteps < 20){
-     numSteps += candidates[i].move();
-     turns++;
-     }
-     results.push(`${candidates[i].name} took ${turns} turns to take 20 steps.`);
- }
- return results;
+
+function fitnessTest(array) {
+
+  let results = [];
+
+  for (item in array) {
+
+    let steps = 0;
+
+    let turn = 0;
+
+    while (steps < 20) {
+
+      steps += array[item].move();
+
+      turn++;
+
+    }
+
+    let string = `${array[item].name} took ${turn} turns to take 20 steps.`
+
+    results.push(string);
+
+  }
+
+  return results;
+
 }
+
+let resultsArray = fitnessTest(crew);
+
+for (item in resultsArray) {
+
+  console.log(resultsArray[item]);
+
+}
+
+
 // After you have created the other object literals, add the astronautID property to each one.
 
 // Create an array to hold the animal objects.
