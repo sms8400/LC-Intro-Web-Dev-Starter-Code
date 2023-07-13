@@ -14,6 +14,8 @@ let scores = [[95, 86, 83, 81, 76],[79, 71, 79, 87, 72],[94, 87, 87, 83, 82],[99
 //User interface:
 let prompts = ['display all scores', 'average the scores for each test', 'average the scores for each astronaut','select the next spacewalker'];
 
+
+
 for (let i = 0; i<prompts.length; i++){
   let response = input.question(`Would you like to ${prompts[i]}? Y/N: `);
   if (response.toLowerCase()==='y'){
@@ -37,3 +39,4 @@ for (let i = 0; i<prompts.length; i++){
     console.log("Option skipped.");
   }
 }
+ 
