@@ -1,5 +1,4 @@
 //TODO: Export ONLY the printAll function.
-
 function printAll(names, tests, scores){
     let header = 'Name';
     let row = '';
@@ -35,4 +34,8 @@ function printAll(names, tests, scores){
     return;
   }
   
-  
+  module.exports = {
+    printStudentScores: printStudentScores,
+    printTestScores: printTestScores,
+    printAll: printAll
+ };
