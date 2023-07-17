@@ -2,7 +2,6 @@
 const launchcode = require('../index.js');
 
 describe("The launchcode object", function(){
-
   // Write your unit tests here!
   it('should have a property called organization', function (){
     expect(launchcode.organization).toEqual('nonprofit');
