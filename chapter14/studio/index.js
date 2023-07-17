@@ -12,9 +12,20 @@ let launchcode = {
         result += 'Code!';
      }
      if (num % 5===0){
+        if(result.length > 0){
+            result += ' ';
+        }
         result += 'Rocks!';
      }
-     return result += '!';
+     if(result.length === 0){
+        result = "Rutabagas! That doesn't work."
+     }else{
+        result += '!';
+     }
+     if(result === 'Luanch Rocks!'){
+        result += '(CRASH!!!!)';
+     }
+     return result + '!';
     }
 };
 module.exports = launchcode;
