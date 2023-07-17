@@ -9,5 +9,8 @@ function checkFive(num){
     }
     return result;
   }
+  if (num > 5) {
+    
+ }
 
-
+module.exports=checkFive;
