@@ -13,4 +13,4 @@ describe("whoWon", function(){
         let output = test.whoWon('sissors','rock');
         expect(output).toEqual("Player 2 wins!");
      });
- }
+});
