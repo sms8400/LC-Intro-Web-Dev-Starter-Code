@@ -1,8 +1,4 @@
-const processor = require('../processor.js');
-
-describe("transmission processor", function() {
-
-   it("takes a string returns an object", function(){
+it("takes a string returns an object", function(){
       let result = processor("9701::<489584872710>");
       expect(typeof result).toEqual("object");
    });
@@ -26,4 +22,3 @@ describe("transmission processor", function() {
    let result = processor("9701::487297403495720912>");
    expect(result.rawData).toEqual(-1);
    });  
-});
