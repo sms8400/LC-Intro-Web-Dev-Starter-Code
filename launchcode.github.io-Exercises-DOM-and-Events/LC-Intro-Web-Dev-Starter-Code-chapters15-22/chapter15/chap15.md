@@ -1,1 +1,0 @@
-### There are no exercises or studio for this chapter.
